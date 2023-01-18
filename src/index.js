@@ -25,9 +25,9 @@ import { task4Old, task4New } from './es-features/task4';
 import { task5Old, task5New } from './es-features/task5';
 import { task6Old, task6New } from './es-features/task6';
 import { task7Old, task7New } from './es-features/task7';
-// import { task8Old, task8New } from './es-features/task8';
-// import { task9Old, task9New } from './es-features/task9';
-// import { task10Old, task10New } from './es-features/task10';
+import { task8Old, task8New } from './es-features/task8';
+import { task9Old, task9New } from './es-features/task9';
+import { task10Old, task10New } from './es-features/task10';
 // import { task11Old, task11New } from './es-features/task11';
 // import { task12Old, task12New } from './es-features/task12';
 // import { task13Old, task13New } from './es-features/task13';
@@ -67,20 +67,20 @@ console.log('=============');
 console.log('task7 old', task7Old()); // {test: 0, foo: 1, bar: 2}
 console.log('task7 new', task7New()); // {test: 0, foo: 1, bar: 2}
 
-// console.log('=============');
+console.log('=============');
 
-// console.log('task8 old', task8Old()); // [0, 5, 10, 15]
-// console.log('task8 new', task8New()); // [0, 5, 10, 15]
+console.log('task8 old', task8Old()); // [0, 5, 10, 15]
+console.log('task8 new', task8New()); // [0, 5, 10, 15]
 
-// console.log('=============');
+console.log('=============');
 
-// console.log('task9 old', task9Old()); // [true, 1]
-// console.log('task9 new', task9New()); // [true, 1]
+console.log('task9 old', task9Old()); // [true, 1]
+console.log('task9 new', task9New()); // [true, 1]
 
-// console.log('=============');
+console.log('=============');
 
-// console.log('task10 old', task10Old()); // {name: 'Max', age: 12, color: red}
-// console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
+console.log('task10 old', task10Old()); // {name: 'Max', age: 12, color: red}
+console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
 
 // console.log('=============');
 
