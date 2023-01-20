@@ -34,6 +34,12 @@ import { task10Old, task10New } from './es-features/task10';
 // import { task14Old, task14New } from './es-features/task14';
 // import { task15Old, task15New } from './es-features/task15';
 
+import { any } from './array-practice/task1';
+import { arrayDiff } from './array-practice/task2';
+import { forEachRight } from './array-practice/task3';
+import { union } from './array-practice/task4';
+import { createGenerator } from './array-practice/task5';
+
 console.log('task1 old', task1Old(10) === 500); // true
 console.log('task1 new', task1New(10) === 500); // true
 
@@ -82,7 +88,7 @@ console.log('=============');
 console.log('task10 old', task10Old()); // {name: 'Max', age: 12, color: red}
 console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
 
-// console.log('=============');
+console.log('=============');
 
 // console.log('task11 old', task11Old({a: null}, 'a')); // false
 // console.log('task11 new', task11New({a: null}, 'a')); // false
@@ -108,3 +114,31 @@ console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
 // console.log('task15 new', task15New([['a', 1], ['b', 2]])); // {a: 1, b: 2}
 
 // console.log('=============');
+
+console.log(any([0, 1, 2, 0], (x) => x >= 2)); // true
+console.log(any([0, 0, 1, 0])); // true
+console.log(any([0, 0, 0, 0])); // false
+
+console.log('=============');
+
+console.log(arrayDiff([1, 2, 3], [1, 2, 4])); // [3, 4]
+console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); // [4, '4']
+
+console.log('=============');
+
+forEachRight([1, 2, 3, 4], (val) => console.log(val)); // в консоль 4 3 2 1
+
+console.log('=============');
+
+console.log(union([5, 1, 2, 3, 3], [4, 3, 2])); // [5, 1, 2, 3, 4]
+console.log(union([5, 1, 3, 3, 4], [1, 3, 4])); // [5, 1, 3, 4]
+
+console.log('=============');
+
+const generator = createGenerator([1, '6', 3, 2]);
+console.log(generator.next()); // 1
+console.log(generator.next()); // '6'
+console.log(generator.next()); // 3
+console.log(generator.next()); // 2
+console.log(generator.next()); // 'Complete!'
+console.log(generator.next()); // 'Complete!'

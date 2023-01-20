@@ -15,3 +15,12 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+
+// eslint-disable-next-line import/prefer-default-export
+export const arrayDiff = (array1, array2) => {
+  const combinedArray = array1.concat(array2);
+
+  const newArray = combinedArray.filter((item) => !array1.includes(item) || !array2.includes(item));
+
+  return newArray;
+};

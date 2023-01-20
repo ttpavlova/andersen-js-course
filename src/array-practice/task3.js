@@ -11,3 +11,20 @@
  *
  * forEachRight([1, 2, 3, 4], val => console.log(val)); -> в консоль 4 3 2 1
  */
+
+// ver1, no forEach
+// export const forEachRight = (array, callback) => {
+//   const arrayCopy = [...array];
+
+//   for (let i = 0; i < array.length; i += 1) {
+//     const lastItem = arrayCopy.pop();
+//     callback(lastItem);
+//   }
+// };
+
+// ver2
+// eslint-disable-next-line import/prefer-default-export
+export const forEachRight = (array, callback) => {
+  const reversedArray = [...array].reverse();
+  reversedArray.forEach(callback);
+};
