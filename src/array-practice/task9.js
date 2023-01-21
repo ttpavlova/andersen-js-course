@@ -10,3 +10,24 @@
  * console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); -> [0, 3]
  * console.log(indexOfAll([1, 2, 3], 4)); -> []
  */
+
+// ver 1
+// eslint-disable-next-line import/prefer-default-export
+export const indexOfAllVer1 = (array, element) => {
+  const resultArray = [];
+  let index = array.indexOf(element);
+  while (index !== -1) {
+    resultArray.push(index);
+    index = array.indexOf(element, index + 1);
+  }
+
+  return resultArray;
+};
+
+// ver 2
+// eslint-disable-next-line import/prefer-default-export
+export const indexOfAll = (array, element) =>
+  array.reduce(
+    (acc, currentValue, index) => (currentValue === element ? [...acc, index] : acc),
+    []
+  );

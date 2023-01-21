@@ -20,3 +20,7 @@
  * console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1)); -> 6000
  * console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); -> -60
  */
+
+// eslint-disable-next-line import/prefer-default-export
+export const transformArrayToNumber = (array, callback, initialValue = 0) =>
+  array.reduce(callback, initialValue);
