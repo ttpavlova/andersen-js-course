@@ -5,6 +5,8 @@ import { delay } from './asynchronous-programming/task3';
 import { getDataTask4 } from './asynchronous-programming/task4';
 import { getData } from './asynchronous-programming/task5';
 import { getResolvedPromise } from './asynchronous-programming/task6';
+import { foo as fooTask7 } from './asynchronous-programming/task7';
+import { foo as fooTask8 } from './asynchronous-programming/task8';
 
 foo(5, createCb('cb')); // x <= 10
 foo(20, createCb('cb')); // x > 10 // cb
@@ -57,3 +59,14 @@ getResolvedPromise(500)
   })
   .catch((error) => console.log(error)) // Error: Ошибка!
   .finally(() => console.log('This is finally!')); // This is finally!
+
+console.log('=============');
+
+fooTask7(); // 20
+
+console.log('=============');
+
+fooTask8('https://jsonplaceholder.typicode.com/users');
+// {id: 1, name: 'Leanne Graham', username: 'Bret', email: 'Sincere@april.biz', address: {…}, …}
+fooTask8('ht://jsonplaceholder.typicode.com/users');
+// Fetch API cannot load ht://jsonplaceholder.typicode.com/users. URL scheme "ht" is not supported.
