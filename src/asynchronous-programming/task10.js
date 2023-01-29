@@ -10,5 +10,6 @@ class Musician {
   }
 }
 
-// eslint-disable-next-line import/prefer-default-export
-export const musician = new Musician('https://jsonplaceholder.typicode.com/albums');
+const musician = new Musician('https://jsonplaceholder.typicode.com/albums');
+
+musician.getAlbums().then((albums) => console.log(albums));

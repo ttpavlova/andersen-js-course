@@ -1,9 +1,9 @@
-export const createCb = (str) =>
+const createCb = (str) =>
   function () {
     console.log(str);
   };
 
-export const foo = (x, cb) => {
+const foo = (x, cb) => {
   if (x > 10) {
     console.log('x > 10');
     cb();
@@ -11,3 +11,6 @@ export const foo = (x, cb) => {
     console.log('x <= 10');
   }
 };
+
+foo(5, createCb('cb')); // x <= 10
+foo(20, createCb('cb')); // x > 10 // cb

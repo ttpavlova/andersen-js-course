@@ -1,6 +1,7 @@
-// eslint-disable-next-line import/prefer-default-export
-export function delay(ms) {
+function delay(ms) {
   return new Promise((resolve) => {
     setTimeout(() => resolve(100), ms);
   });
 }
+
+delay(1000).then((value) => console.log('Done with ' + value)); // Done with 100
