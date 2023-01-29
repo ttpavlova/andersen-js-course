@@ -7,6 +7,8 @@ import { getData } from './asynchronous-programming/task5';
 import { getResolvedPromise } from './asynchronous-programming/task6';
 import { foo as fooTask7 } from './asynchronous-programming/task7';
 import { foo as fooTask8 } from './asynchronous-programming/task8';
+import { foo as fooTask9 } from './asynchronous-programming/task9';
+import { musician } from './asynchronous-programming/task10';
 
 foo(5, createCb('cb')); // x <= 10
 foo(20, createCb('cb')); // x > 10 // cb
@@ -70,3 +72,11 @@ fooTask8('https://jsonplaceholder.typicode.com/users');
 // {id: 1, name: 'Leanne Graham', username: 'Bret', email: 'Sincere@april.biz', address: {…}, …}
 fooTask8('ht://jsonplaceholder.typicode.com/users');
 // Fetch API cannot load ht://jsonplaceholder.typicode.com/users. URL scheme "ht" is not supported.
+
+fooTask9(); // Some string!
+
+console.log('=============');
+
+musician.getAlbums().then((albums) => console.log(albums));
+
+console.log('=============');
